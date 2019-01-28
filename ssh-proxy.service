@@ -1,0 +1,11 @@
+[Unit]
+Description=Reserve proxy ssh -> reex.tk:12200
+After=network-online.target
+
+[Service]
+User=root
+ExecStart=/usr/bin/autossh -NR 12200:localhost:22 root@reex.tk
+Restart=always
+
+[Install]
+WantedBy=multi-user.target
