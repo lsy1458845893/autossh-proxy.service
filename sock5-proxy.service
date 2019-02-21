@@ -1,0 +1,11 @@
+[Unit]
+Description=proxy sock5 1080 -> reex.tk
+After=network-online.target
+
+[Service]
+User=root
+ExecStart=/usr/bin/autossh -ND 1080 root@reex.tk
+Restart=always
+
+[Install]
+WantedBy=multi-user.target
