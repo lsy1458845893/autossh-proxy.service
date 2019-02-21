@@ -5,6 +5,7 @@ After=network-online.target
 [Service]
 User=root
 ExecStart=/usr/bin/autossh -ND 1080 root@reex.tk
+RestartSec=5
 Restart=always
 
 [Install]
