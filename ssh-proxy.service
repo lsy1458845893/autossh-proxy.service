@@ -4,7 +4,7 @@ After=network-online.target
 
 [Service]
 User=root
-ExecStart=/usr/bin/autossh -NR 12200:localhost:22 root@reex.tk
+ExecStart=/usr/bin/autossh -NR '*:12200:localhost:22' root@reex.tk
 RestartSec=5
 Restart=always
 
